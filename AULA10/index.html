@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form name="form1" method="post" action="http://hebertphp.awardspace.us/recebe.php">
+        <label for="login">Login</label><input type="text" id="login" name="login" placeholder="Digite seu login" required>*<br>
+        <!-- o campo value no campo input type fica como texto, campo pre determinado -->
+        <!-- name identificação unica -->
+         <!-- get consegue alterar a partir da barra de url- qtidade de dados e metodos de segurança -->
+        <!-- todo campo que digita o texto é get -->
+         <!-- post não aparece a informação na barra url -->
+          <!-- qual o dado obrigatorio pra chegar no back-end é o name -->
+           <!-- padrao do input é text, quando não entendi fica como text, id é no back-end  -->
+         <!-- todo campo que digitar não vai visualizar password -->
+        <label for="senha">senha</label> <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>*<br>
+        Data<input type="datetime-local" id="data" name="data" placeholder="Digite uma data"><br>
+        <input type="hidden" name="vai" value="já foi">
+        <!-- hidden campo fica escondido, usuario nao acessa e o campo vai para o formulario -->
+        <h2>Selecione uma ou mais linguagens</h2>
+        <input type="checkbox" name="js" id="js"checked><label for="js">JS</label><br>
+        <input type="checkbox" name="php" id="php"><label for="php">PHP</label><br>
+        <input type="checkbox" name="sql" id="sql"><label for="sql">SQL</label><br>
+        <h2>Qual dia da semana é a aula de HTML/ CSS?</h2>
+        <!-- checked deixa o campo marcado, no tipo checkbox compensa, mas no radio nao, pois normalmentepode ser a resposta errada -->
+        <input type="radio" name="Aula" value="segunda" id="segunda"><label for="segunda" required>Segunda</label><br>
+        <input type="radio" name="Aula" value="terca" id="terca"><label for="terca">Terça</label><br>
+        <input type="radio" name="Aula" value="quarta" id="quarta"><label for="quarta">Quarta</label><br>
+        <input type="radio" name="Aula" value="quinta" id="quinta"><label for="quinta">Quinta</label><br>
+        <input type="radio" name="Aula" value="sexta" id="sexta"><label for="sexta">Sexta</label><br>
+    <!-- no tipo radio para fazer um opção diferente, então tem que mandar um unico campo, para enviar somente ele -->
+     <!-- no radio campo igual no name e diferente no value -->
+      <!-- no campo radio como faço pra se tornar obrigatorio - basta marcar apenas um deles com required-->
+        Selecione UF <select name="uf">
+            <option value="RJ">Rio de Janeiro</option>  
+            <!-- valor que vai para o backend é o value, pois é o valor -->
+            <option>MG</option>
+            <option selected>SP</option>
+            <option>ES</option>
+        </select><br>
+        Mensagem <textarea name="msg" rows="10" cols="40" placeholder="Digite sua mensagem"></textarea><br>
+        <input type="submit" value="Enviar!"><br><input type="reset" value="Limpar Dados"><br>
+        </form><br>
+    <b>*</b> - Campo obrigatorio
+</body>
+</html>
